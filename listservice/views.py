@@ -20,7 +20,7 @@ def get_issues_list(request,user,repo, format=None):
 		count_dict["longer"] = 0
 		
 		today = datetime.now()
-		github = github3.login("gc-Held", "gokul@1131011") # user credentials
+		github = github3.login("gc-Held", "secret_password") # user credentials
 		repo = github3.repository(user, repo)   #opens the repository 
 		open_issues = [i for i in repo.iter_issues()] # lists all the issues
 		count_dict["total"] = len(open_issues)
